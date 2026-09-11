@@ -1,0 +1,17 @@
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery-img {
+    max-width: 45%;
+    max-height: 45%;
+    object-fit: contain;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
