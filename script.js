@@ -135,3 +135,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+function openModal(url, type, title) {
+  const modal = document.getElementById("projectModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const iframe = document.getElementById("projectIframe");
+  const imgPreview = document.getElementById("projectImgPreview");
+
+  modalTitle.textContent = title;
+
+  if (type === "iframe") {
+    iframe.src = url;
+    iframe.style.display = "block";
+    imgPreview.style.display = "none";
+  } else {
+    imgPreview.src = url;
+    imgPreview.style.display = "block";
+    iframe.style.display = "none";
+  }
+
+  modal.classList.add("active");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("projectModal");
+  const closeBtn = document.getElementById("closeModalBtn");
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("active");
+      document.getElementById("projectIframe").src = "";
+    });
+  }
+
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("active");
+        document.getElementById("projectIframe").src = "";
+      }
+    });
+  }
+});

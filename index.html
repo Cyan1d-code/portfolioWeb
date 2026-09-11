@@ -44,6 +44,19 @@
       <i class="fa-solid fa-moon"></i>
     </button>
 
+    <div id="projectModal" class="project-modal">
+      <div class="project-modal-content">
+        <div class="project-modal-header">
+          <span id="modalTitle">Project Preview</span>
+          <button id="closeModalBtn" class="close-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="project-modal-body">
+          <iframe id="projectIframe" src="" frameborder="0"></iframe>
+          <img id="projectImgPreview" src="" alt="Project Preview" style="display:none;" />
+        </div>
+      </div>
+    </div>
+    
     <section id="profile">
       <div class="oledHeroBox">
         <div class="sectionPicContainer">
@@ -112,25 +125,25 @@
           <img src="./assets/project-1.png" alt="Project 1" class="projectImg" />
           <h2 class="projectTitle">Project Calculator</h2>
           <p style="font-size: 0.85rem; margin-bottom: 1rem;">Android app Calculator</p>
-          <button class="btn btnColor2 projectBtn" onclick="window.open('./assets/project-1.png')">View Image</button>
+          <button class="btn btnColor2 projectBtn" onclick="openModal('./assets/project-1.png', 'image', 'Project Calculator')">View Image</button>
         </div>
         <div class="colorContainer">
           <img src="./assets/project-2.png" alt="Project 2" class="projectImg" />
           <h2 class="projectTitle">Project Website</h2>
           <p style="font-size: 0.85rem; margin-bottom: 1rem;">Web Development Site</p>
-          <button class="btn btnColor2 projectBtn" onclick="window.open('./assets/WebDev/WebDev.html')">View Site</button>
+          <button class="btn btnColor2 projectBtn" onclick="openModal('./assets/WebDev/WebDev.html', 'iframe', 'Project Website')">View Site</button>
         </div>
         <div class="colorContainer">
           <img src="./assets/project-3.png" alt="Project 3" class="projectImg" />
           <h2 class="projectTitle">Project Java App</h2>
           <p style="font-size: 0.85rem; margin-bottom: 1rem;">Banking System</p>
-          <button class="btn btnColor2 projectBtn" onclick="window.open('./assets/BS/bankingSystem.html')">View Images</button>
+          <button class="btn btnColor2 projectBtn" onclick="openModal('./assets/BS/bankingSystem.html', 'iframe', 'Project Java App')">View Images</button>
         </div>
         <div class="colorContainer">
           <img src="./assets/project-4.png" alt="Project 4" class="projectImg" />
           <h2 class="projectTitle">Project Android App</h2>
           <p style="font-size: 0.85rem; margin-bottom: 1rem;">Android To-do List</p>
-          <button class="btn btnColor2 projectBtn" onclick="window.open('./assets/project-4.png')">View Image</button>
+          <button class="btn btnColor2 projectBtn" onclick="openModal('./assets/project-4.png', 'image', 'Project Android App')">View Image</button>
         </div>
       </div>
     </section>
