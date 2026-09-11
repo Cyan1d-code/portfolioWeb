@@ -236,10 +236,28 @@ body.darkMode .icon {
 }
 
 .aboutPic {
-  border-radius: 2rem;
-  width: 300px;
-  height: 300px;
+  border-radius: 1.5rem;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
+  padding: 10px;
+  transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.darkMode .aboutPic {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+body:not(.darkMode) .aboutPic {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
 .aboutDetailsContainer {
@@ -678,4 +696,208 @@ body.is-changing-wallpaper .wallpaper-transition i {
   height: 100%;
   border: none;
   object-fit: contain;
+}
+
+/* ============================
+   RESPONSIVE — TABLET (<=900px)
+   ============================ */
+@media (max-width: 900px) {
+  section {
+    padding: 10vh 6vw;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .oledHeroBox {
+    padding: 2rem 2rem;
+    gap: 1.5rem;
+  }
+
+  #profile .sectionPicContainer {
+    height: 180px;
+    width: 180px;
+  }
+
+  .sectionContainer {
+    gap: 2rem;
+  }
+
+  .aboutPic,
+  body.darkMode .aboutPic,
+  body:not(.darkMode) .aboutPic {
+    width: 220px;
+    height: 220px;
+  }
+
+  .articleContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .colorContainer {
+    width: 200px;
+  }
+
+  .project-modal-content {
+    width: 92vw;
+    height: 75vh;
+  }
+}
+
+/* ============================
+   RESPONSIVE — MOBILE (<=600px)
+   ============================ */
+@media (max-width: 600px) {
+  /* Desktop top nav is redundant with the iOS-style dock below —
+     hide it on small screens instead of squeezing links into a bar
+     that was never designed to shrink. */
+  #desktopNav {
+    display: none;
+  }
+
+  .themeToggleBtn {
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+  }
+
+  section {
+    padding: 12vh 6vw 14vh; /* extra bottom padding clears the fixed dock */
+    min-height: auto;
+  }
+
+  #profile {
+    height: 100vh;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .sectionTextP1 {
+    font-size: 0.85rem;
+  }
+
+  .oledHeroBox {
+    flex-direction: column;
+    padding: 1.8rem 1.5rem;
+    border-radius: 1.5rem;
+    gap: 1rem;
+  }
+
+  #profile .sectionPicContainer {
+    height: 140px;
+    width: 140px;
+  }
+
+  .btnContainer {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.6rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .sectionContainer {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .aboutPic,
+  body.darkMode .aboutPic,
+  body:not(.darkMode) .aboutPic {
+    width: 180px;
+    height: 180px;
+  }
+
+  #about .textContainer {
+    padding: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .experienceDetailsContainer {
+    max-width: 100%;
+  }
+
+  #experience .detailsContainer {
+    padding: 1.5rem;
+  }
+
+  .articleContainer {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #projects .aboutContainers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .colorContainer {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .contactInfoUpperContainer {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .contactInfoContainer {
+    font-size: 0.95rem;
+    word-break: break-word;
+    text-align: center;
+  }
+
+  /* Dock: shrink to fit narrow viewports without wrapping */
+  .iosDock {
+    gap: 4px;
+    padding: 8px 10px;
+    bottom: 12px;
+  }
+
+  .dockItem {
+    width: 44px;
+    height: 42px;
+  }
+
+  .dockItem i {
+    font-size: 0.85rem;
+  }
+
+  .dockLabel {
+    font-size: 8px;
+  }
+
+  /* Wallpaper controls: keep out of the dock's way and shrink text */
+  .wallpaperControls {
+    bottom: 70px;
+    left: 12px;
+  }
+
+  .wallpaperControls .wallpaperSourceInfo {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+  }
+
+  .wallpaperControls .guiBtn {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  .project-modal-content {
+    width: 95vw;
+    height: 80vh;
+    border-radius: 14px;
+  }
+
+  .project-modal-header {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
 }
