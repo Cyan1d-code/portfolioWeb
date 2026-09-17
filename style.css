@@ -110,13 +110,14 @@ body.darkMode .themeToggleBtn {
 section {
   min-height: 100vh;
   min-height: 100dvh;
-  padding: 12vh 8vw;
+  padding: 14vh 8vw 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
+  margin-bottom: 6rem;
 }
 
 .title {
@@ -339,8 +340,9 @@ body.darkMode #about .textContainer {
   justify-content: center;
   min-height: 100vh;
   min-height: 100dvh;
-  padding: 12vh 8vw;
+  padding: 14vh 8vw 12vh;
   width: 100%;
+  margin-top: 4rem;
 }
 
 .experienceDetailsContainer {
