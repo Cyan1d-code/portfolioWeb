@@ -389,6 +389,28 @@ body.darkMode #about .textContainer {
   font-size: 0.95rem;
 }
 
+#experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.experienceDetailsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.detailsContainer {
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 #projects .aboutContainers {
   display: flex;
   flex-wrap: wrap;
