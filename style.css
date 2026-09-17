@@ -132,6 +132,7 @@ section {
   opacity: 0.85;
 }
 
+/* Profile Section */
 #profile {
   padding: 0 !important;
   width: 100vw;
@@ -250,7 +251,7 @@ body.darkMode .icon {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 2rem 140px;
+  padding: 120px 2rem 140px;
   box-sizing: border-box;
 }
 
@@ -323,9 +324,9 @@ body.darkMode .detailsContainer {
 }
 
 #about .textContainer {
-  padding: 1.8rem;
+  padding: 1.4rem 1.8rem;
   border-radius: 1.5rem;
-  line-height: 1.7;
+  line-height: 1.6;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
@@ -349,8 +350,13 @@ body.darkMode #about .textContainer {
 #experience {
   min-height: 100vh;
   min-height: 100dvh;
-  margin-top: 15vh;
-  margin-bottom: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 140px 2rem 140px;
+  box-sizing: border-box;
+  scroll-margin-top: 5vh;
 }
 
 .experienceDetailsContainer {
