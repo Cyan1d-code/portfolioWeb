@@ -7,6 +7,35 @@ let isGuiHidden = false;
 const rerollSound = new Audio("https://actions.google.com/sounds/v1/water_exploration/water_drop.ogg");
 rerollSound.volume = 0.5;
 
+const LOCAL_FALLBACKS = {
+  dark: {
+    path: "./assets/Wallpaper/Fallback_Wallpaper_Dark.gif",
+    artist: "makrustic",
+    sourceUrl: "https://danbooru.donmai.us/posts?tags=makrustic"
+  },
+  light: {
+    path: "./assets/Wallpaper/Fallback_Wallpaper_Light.gif",
+    artist: "makrustic",
+    sourceUrl: "https://danbooru.donmai.us/posts?tags=makrustic"
+  }
+};
+
+function setFallbackWallpaper() {
+  const isDark = document.body.classList.contains("darkMode");
+  const choice = isDark ? LOCAL_FALLBACKS.dark : LOCAL_FALLBACKS.light;
+
+  document.body.style.backgroundImage = `url('${choice.path}')`;
+  document.body.classList.add("hasWallpaper");
+
+  const sourceText = document.getElementById("sourceText");
+  const postCountInfo = document.getElementById("postCountInfo");
+
+  if (sourceText) sourceText.textContent = `Art by ${choice.artist}`;
+  if (postCountInfo) {
+    postCountInfo.innerHTML = `<a href="${choice.sourceUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Offline Mode (${isDark ? "Dark" : "Light"})</a>`;
+  }
+}
+
 async function fetchWallpapers(theme) {
   try {
     const timeTag = theme === "dark" ? "night" : "day";
