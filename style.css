@@ -166,8 +166,7 @@ body.darkMode .oledHeroBox {
 }
 
 #profile .sectionPicContainer,
-.sectionPicContainer,
-.section__pic-container {
+#profile .section__pic-container {
   height: 250px !important;
   width: 250px !important;
   max-width: 250px !important;
@@ -179,10 +178,9 @@ body.darkMode .oledHeroBox {
 }
 
 #profile .sectionPicContainer img,
-.pic-light,
-.pic-dark {
-  width: 250px !important;
-  height: 250px !important;
+#profile .section__pic-container img {
+  width: 100% !important;
+  height: 100% !important;
   max-width: 250px !important;
   max-height: 250px !important;
   border-radius: 50% !important;
@@ -298,24 +296,25 @@ body.darkMode .icon {
   width: 250px;
   height: 250px;
   flex-shrink: 0;
-  border-radius: 1.5rem;
+  border-radius: 1.5rem !important;
   object-fit: cover;
-  padding: 8px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+  padding: 0;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 body:not(.darkMode) .aboutPic {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(240, 240, 240, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 body.darkMode .aboutPic {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .aboutDetailsContainer {
