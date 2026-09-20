@@ -165,37 +165,47 @@ body.darkMode .oledHeroBox {
   -webkit-backdrop-filter: blur(16px);
 }
 
-#profile .sectionPicContainer {
-  height: 250px;
-  width: 250px;
+#profile .sectionPicContainer,
+.sectionPicContainer,
+.section__pic-container {
+  height: 250px !important;
+  width: 250px !important;
+  max-width: 250px !important;
+  max-height: 250px !important;
   flex-shrink: 0;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 50% !important;
+  position: relative;
 }
 
-#profile .sectionPicContainer img {
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+#profile .sectionPicContainer img,
+.pic-light,
+.pic-dark {
+  width: 250px !important;
+  height: 250px !important;
+  max-width: 250px !important;
+  max-height: 250px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
 }
 
-#profile .sectionPicContainer img.pic-light {
-  display: block;
+/* Light Mode: display pic-light, hide pic-dark */
+.pic-light {
+  display: block !important;
 }
 
-#profile .sectionPicContainer img.pic-dark {
-  display: none;
+.pic-dark {
+  display: none !important;
 }
 
-body.darkMode #profile .sectionPicContainer img.pic-light {
-  display: none;
+/* Dark Mode: hide pic-light, display pic-dark */
+body.darkMode .pic-light {
+  display: none !important;
 }
 
-body.darkMode #profile .sectionPicContainer img.pic-dark {
-  display: block;
+body.darkMode .pic-dark {
+  display: block !important;
 }
-
 .sectionText {
   text-align: center;
 }
