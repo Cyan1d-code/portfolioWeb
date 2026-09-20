@@ -178,26 +178,21 @@ body.darkMode .oledHeroBox {
   object-fit: cover;
 }
 
-.pic-light {
+#profile .sectionPicContainer img.pic-light {
   display: block;
 }
 
-.pic-dark {
+#profile .sectionPicContainer img.pic-dark {
   display: none;
 }
 
-body.darkMode .pic-light {
+body.darkMode #profile .sectionPicContainer img.pic-light {
   display: none;
 }
 
-body.darkMode .pic-dark {
+body.darkMode #profile .sectionPicContainer img.pic-dark {
   display: block;
 }
-
-.sectionText {
-  text-align: center;
-}
-
 .sectionTextP2 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
