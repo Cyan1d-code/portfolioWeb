@@ -169,6 +169,8 @@ body.darkMode .oledHeroBox {
   height: 250px;
   width: 250px;
   flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 50%;
 }
 
 #profile .sectionPicContainer img {
@@ -193,6 +195,11 @@ body.darkMode #profile .sectionPicContainer img.pic-light {
 body.darkMode #profile .sectionPicContainer img.pic-dark {
   display: block;
 }
+
+.sectionText {
+  text-align: center;
+}
+
 .sectionTextP2 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
